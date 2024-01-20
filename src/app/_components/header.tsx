@@ -1,12 +1,13 @@
-
-import { FaGithub, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 
 export const Header = () => {
   return (
-    <header className="flex justify-between items-center p-5 bg-black text-white">
+    <header className="flex justify-between items-center p-5 bg-gray-950 text-white">
       <div className="flex items-center">
-        <Link href="/">🐧🐤🐦</Link>
+        <Link href="/" className="bg-gray-700 rounded-full p-2" aria-label="Go to Home Page">
+          🐧🐤🐦
+        </Link>
       </div>
       <div className="flex items-center space-x-4">
         <a
