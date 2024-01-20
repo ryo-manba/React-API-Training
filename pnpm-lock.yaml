@@ -7,19 +7,19 @@ settings:
 dependencies:
   next:
     specifier: 14.1.0
-    version: 14.1.0(react-dom@18.0.0)(react@18.0.0)
+    version: 14.1.0(react-dom@0.0.0-experimental-60a927d04-20240113)(react@0.0.0-experimental-60a927d04-20240113)
   react:
-    specifier: ^18
-    version: 18.0.0
+    specifier: npm:react@0.0.0-experimental-60a927d04-20240113
+    version: 0.0.0-experimental-60a927d04-20240113
   react-dom:
-    specifier: ^18
-    version: 18.0.0(react@18.0.0)
+    specifier: npm:react-dom@0.0.0-experimental-60a927d04-20240113
+    version: 0.0.0-experimental-60a927d04-20240113(react@0.0.0-experimental-60a927d04-20240113)
   react-error-boundary:
     specifier: ^4.0.12
-    version: 4.0.12(react@18.0.0)
+    version: 4.0.12(react@0.0.0-experimental-60a927d04-20240113)
   react-icons:
     specifier: ^5.0.1
-    version: 5.0.1(react@18.0.0)
+    version: 5.0.1(react@0.0.0-experimental-60a927d04-20240113)
 
 devDependencies:
   '@biomejs/biome':
@@ -29,11 +29,8 @@ devDependencies:
     specifier: ^20
     version: 20.0.0
   '@types/react':
-    specifier: ^18
-    version: 18.0.0
-  '@types/react-dom':
-    specifier: ^18
-    version: 18.0.0
+    specifier: 18.2.48
+    version: 18.2.48
   autoprefixer:
     specifier: ^10.0.1
     version: 10.0.1(postcss@8.0.0)
@@ -313,14 +310,8 @@ packages:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
     dev: true
 
-  /@types/react-dom@18.0.0:
-    resolution: {integrity: sha512-49897Y0UiCGmxZqpC8Blrf6meL8QUla6eb+BBhn69dTXlmuOlzkfr7HHY/O8J25e1lTUMs+YYxSlVDAaGHCOLg==}
-    dependencies:
-      '@types/react': 18.0.0
-    dev: true
-
-  /@types/react@18.0.0:
-    resolution: {integrity: sha512-7+K7zEQYu7NzOwQGLR91KwWXXDzmTFODRVizJyIALf6RfLv2GDpqpknX64pvRVILXCpXi7O/pua8NGk44dLvJw==}
+  /@types/react@18.2.48:
+    resolution: {integrity: sha512-qboRCl6Ie70DQQG9hhNREz81jqC1cs9EVNcjQ1AU+jH6NFfSAhVVbrrY/+nSF+Bsk4AOwm9Qa61InvMCyV+H3w==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
@@ -735,7 +726,7 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  /next@14.1.0(react-dom@18.0.0)(react@18.0.0):
+  /next@14.1.0(react-dom@0.0.0-experimental-60a927d04-20240113)(react@0.0.0-experimental-60a927d04-20240113):
     resolution: {integrity: sha512-wlzrsbfeSU48YQBjZhDzOwhWhGsy+uQycR8bHAOt1LY1bn3zZEcDyHQOEoN3aWzQ8LHCAJ1nqrWCc9XF2+O45Q==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -756,9 +747,9 @@ packages:
       caniuse-lite: 1.0.30001579
       graceful-fs: 4.2.11
       postcss: 8.4.31
-      react: 18.0.0
-      react-dom: 18.0.0(react@18.0.0)
-      styled-jsx: 5.1.1(react@18.0.0)
+      react: 0.0.0-experimental-60a927d04-20240113
+      react-dom: 0.0.0-experimental-60a927d04-20240113(react@0.0.0-experimental-60a927d04-20240113)
+      styled-jsx: 5.1.1(react@0.0.0-experimental-60a927d04-20240113)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.1.0
       '@next/swc-darwin-x64': 14.1.0
@@ -926,35 +917,35 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /react-dom@18.0.0(react@18.0.0):
-    resolution: {integrity: sha512-XqX7uzmFo0pUceWFCt7Gff6IyIMzFUn7QMZrbrQfGxtaxXZIcGQzoNpRLE3fQLnS4XzLLPMZX2T9TRcSrasicw==}
+  /react-dom@0.0.0-experimental-60a927d04-20240113(react@0.0.0-experimental-60a927d04-20240113):
+    resolution: {integrity: sha512-qh/hY5ReqOw6EY639+qKkcgqhKPzfg2g2Ju9MHP7O+2xaf0NBuqfGQX4PxrqJeGu2dOIVotUIRAdcR2BBnkfhg==}
     peerDependencies:
-      react: ^18.0.0
+      react: 0.0.0-experimental-60a927d04-20240113
     dependencies:
       loose-envify: 1.4.0
-      react: 18.0.0
-      scheduler: 0.21.0
+      react: 0.0.0-experimental-60a927d04-20240113
+      scheduler: 0.0.0-experimental-60a927d04-20240113
     dev: false
 
-  /react-error-boundary@4.0.12(react@18.0.0):
+  /react-error-boundary@4.0.12(react@0.0.0-experimental-60a927d04-20240113):
     resolution: {integrity: sha512-kJdxdEYlb7CPC1A0SeUY38cHpjuu6UkvzKiAmqmOFL21VRfMhOcWxTCBgLVCO0VEMh9JhFNcVaXlV4/BTpiwOA==}
     peerDependencies:
       react: '>=16.13.1'
     dependencies:
       '@babel/runtime': 7.23.8
-      react: 18.0.0
+      react: 0.0.0-experimental-60a927d04-20240113
     dev: false
 
-  /react-icons@5.0.1(react@18.0.0):
+  /react-icons@5.0.1(react@0.0.0-experimental-60a927d04-20240113):
     resolution: {integrity: sha512-WqLZJ4bLzlhmsvme6iFdgO8gfZP17rfjYEJ2m9RsZjZ+cc4k1hTzknEz63YS1MeT50kVzoa1Nz36f4BEx+Wigw==}
     peerDependencies:
       react: '*'
     dependencies:
-      react: 18.0.0
+      react: 0.0.0-experimental-60a927d04-20240113
     dev: false
 
-  /react@18.0.0:
-    resolution: {integrity: sha512-x+VL6wbT4JRVPm7EGxXhZ8w8LTROaxPXOqhlGyVSrv0sB1jkyFGgXxJ8LVoPRLvPR6/CIZGFmfzqUa2NYeMr2A==}
+  /react@0.0.0-experimental-60a927d04-20240113:
+    resolution: {integrity: sha512-IBjAerIyVpy04WjnTmJ1eSVGp1Ota1rL1OT9/35FVmwVzmYWGcI7h7AVvqR+ASl473pfdy3e6v1o9lzgdx5l1w==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
@@ -997,8 +988,8 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /scheduler@0.21.0:
-    resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
+  /scheduler@0.0.0-experimental-60a927d04-20240113:
+    resolution: {integrity: sha512-S9cvxJYRgP/eU526SjYgf9LuhDXNmNqJgaYVnzb+puczNUf1Pp/eO1P+7DMn1Cfezu9H9k9gYblDHPdScbCttQ==}
     dependencies:
       loose-envify: 1.4.0
     dev: false
@@ -1067,7 +1058,7 @@ packages:
       ansi-regex: 6.0.1
     dev: true
 
-  /styled-jsx@5.1.1(react@18.0.0):
+  /styled-jsx@5.1.1(react@0.0.0-experimental-60a927d04-20240113):
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -1081,7 +1072,7 @@ packages:
         optional: true
     dependencies:
       client-only: 0.0.1
-      react: 18.0.0
+      react: 0.0.0-experimental-60a927d04-20240113
     dev: false
 
   /sucrase@3.35.0:

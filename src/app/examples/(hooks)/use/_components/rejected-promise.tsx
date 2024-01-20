@@ -1,40 +1,19 @@
-"use client";
-
-import { Suspense } from "react";
-import { ErrorBoundary } from "react-error-boundary";
-import { Message, MessageProps } from "./message";
+import { MessageContainerWithErrorBoundary, MessageContainerWithPromiseCatch } from "./message-container";
 
 export const RejectedPromiseExample = () => {
   const messagePromise = fetchMockError();
   const messagePromiseWithCatch = fetchMockErrorWithCatch();
   return (
     <>
-      <MessageContainerWithErrorBoundary messagePromise={messagePromise} />
+      {/* MEMO: ErrorBoundary causes build error */}
+      {/* <MessageContainerWithErrorBoundary messagePromise={messagePromise} /> */}
       <MessageContainerWithPromiseCatch messagePromise={messagePromiseWithCatch} />
       Not suspended message.
     </>
   );
 };
 
-const MessageContainerWithErrorBoundary = ({ messagePromise }: MessageProps) => {
-  return (
-    <ErrorBoundary fallback={<p>⚠️Something went wrong</p>}>
-      <Suspense fallback={<p>⌛Downloading message...</p>}>
-        <Message messagePromise={messagePromise} />
-      </Suspense>
-    </ErrorBoundary>
-  );
-};
-
-const MessageContainerWithPromiseCatch = ({ messagePromise }: MessageProps) => {
-  return (
-    <Suspense fallback={<p>⌛Downloading message...</p>}>
-      <Message messagePromise={messagePromise} />
-    </Suspense>
-  );
-};
-
-const fetchMockError = () => {
+const fetchMockError = (): Promise<string> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       reject("Mock error occurred");
@@ -44,8 +23,8 @@ const fetchMockError = () => {
   });
 };
 
-const fetchMockErrorWithCatch = () => {
-  return new Promise((resolve, reject) => {
+const fetchMockErrorWithCatch = (): Promise<string> => {
+  return new Promise<string>((resolve, reject) => {
     setTimeout(() => {
       reject(new Error("Mock error occurred"));
     }, 1000);

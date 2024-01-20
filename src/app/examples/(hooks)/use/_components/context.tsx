@@ -1,5 +1,4 @@
 "use client";
-
 import { createContext, use, useContext, useState } from "react";
 
 const ThemeContext = createContext<string | null>(null);
@@ -46,7 +45,7 @@ const Panel = ({ title, children }: Props) => {
     console.log(user);
   }
 
-  let user: string;
+  let user: string | null;
   if (theme === "dark") {
     // Cannot call useContext in a conditional branch
     user = use(UserContext);

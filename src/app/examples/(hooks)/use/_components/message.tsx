@@ -3,7 +3,7 @@
 import { use } from "react";
 
 export type MessageProps = {
-  messagePromise: Promise<unknown>;
+  messagePromise: Promise<string>;
 };
 export const Message = ({ messagePromise }: MessageProps) => {
   // use() takes a promise and returns the resolved value
