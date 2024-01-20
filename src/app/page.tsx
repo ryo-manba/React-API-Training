@@ -1,4 +1,3 @@
-import { Header } from "@/app/_components/header";
 import Link from "next/link";
 
 type Links = {
@@ -14,6 +13,22 @@ const hooks: Links[] = [
 const components: Links[] = [{ name: "TODO: Profiler", path: "/" }];
 
 const apis: Links[] = [{ name: "TODO: cache", path: "/" }];
+
+export default function Home() {
+  return (
+    <main className="font-sans text-black bg-white">
+      <div className="p-10">
+        <h1 className="text-4xl font-bold mb-2">React Training</h1>
+        <p className="mb-6 text-md text-gray-600">This site is for trying out React APIs.</p>
+        <div className="grid gap-10">
+          <CategorySection title="Hooks" links={hooks} />
+          <CategorySection title="Components" links={components} />
+          <CategorySection title="APIs" links={apis} />
+        </div>
+      </div>
+    </main>
+  );
+}
 
 const CategorySection = ({ title, links }: { title: string; links: Links[] }) => {
   return (
@@ -31,21 +46,3 @@ const CategorySection = ({ title, links }: { title: string; links: Links[] }) =>
     </div>
   );
 };
-
-export default function Home() {
-  return (
-    <div className="flex flex-col h-screen">
-      <Header />
-      <main className="font-sans text-black bg-white">
-        <div className="p-10">
-          <h1 className="text-4xl font-bold mb-10">React Training</h1>
-          <div className="grid gap-10">
-            <CategorySection title="Hooks" links={hooks} />
-            <CategorySection title="Components" links={components} />
-            <CategorySection title="APIs" links={apis} />
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
